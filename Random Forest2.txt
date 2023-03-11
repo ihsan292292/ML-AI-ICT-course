@@ -1,0 +1,86 @@
+
+Reference
+
+
+Random Forest
+===================================
+
+
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+
+df=pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None)
+
+
+##Preprocess the data to prepare it for the model. In this example, we will be encoding the categorical variable (species) using one-hot encoding.
+X = df.iloc[:, :-1]
+y = df.iloc[:, -1]
+y = pd.get_dummies(y)
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+rfc = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
+
+rfc.fit(X_train, y_train)
+
+y_pred = rfc.predict(X_test)
+
+acc = accuracy_score(y_test, y_pred)
+print('Accuracy:', acc)
+=========================================================================
+
+Gradient Descending
+-------------------
+
+
+import pandas as pd
+
+import numpy as np
+
+from sklearn.metrics import classification_report
+
+from sklearn.datasets import load_breast_cancer
+
+from sklearn.ensemble import GradientBoostingClassifier
+
+from sklearn.model_selection import train_test_split
+
+
+
+df = pd.DataFrame(load_breast_cancer()['data'],
+
+columns=load_breast_cancer()['feature_names'])
+
+df['y'] = load_breast_cancer()['target']
+
+df.head(5)
+
+
+
+X,y = df.drop('y',axis=1),df.y
+
+test_size = 0.30 # taking 70:30 training and test set
+
+seed = 7  # Random number seeding for reapeatability of the code
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=seed)
+
+
+ 
+
+gradient_booster = GradientBoostingClassifier(learning_rate=0.1)
+
+gradient_booster.fit(X_train,y_train)
+
+===========================================================================================================
+
+
+
+
+
+
