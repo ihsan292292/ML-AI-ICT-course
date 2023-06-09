@@ -1,0 +1,17 @@
+Supervised Learning 
+
+1. Classification
+2. Regression
+
+Dataset 
+
+collected in 1978 and each of 506 entries represents aggregate information about 14 features of homes from various suburbs located in boston 
+
+crim - per capita crime rate 
+zn - propotion of residential land zone over 25,000 square feet 
+indus
+
+
+workflow 
+
+data - preprocessing - Data analysis - Evalution - Test train 
