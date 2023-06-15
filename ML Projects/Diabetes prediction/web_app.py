@@ -1,10 +1,11 @@
 import numpy as np
 import pickle
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 
 #loading the saved model
-loaded_model = pickle.load(open('trained_model.sav' , 'rb'))
+loaded_model = pickle.load(open('diabetes_trained_model.sav' , 'rb'))
 
 #creatinf a function for prediction
 
