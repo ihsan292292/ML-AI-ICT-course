@@ -1,0 +1,25 @@
+Challenges 
+..........
+
+
+Image/Sensor nose 
+viewing angles
+blurring
+Lightening condition
+Resolution 
+Non Proper Objects 
+Non planer Objects 
+
+Approaches 
+............
+
+collect images 
+split data into train and test 
+use dimension reduction techniques
+train classification model using nueral network on the training data 
+validate the model on the test data 
+Fine tune the parameters to increase classification that accurates to the model on training and test data 
+
+
+This Model is language indeppendent
+
